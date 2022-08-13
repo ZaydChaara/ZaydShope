@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "zaydshop-bfb86": {
+      "hosting": {
+        "ZaydShope": [
+          "zaydshop-bfb86"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "zaydshop-bfb86"
+  }
+}

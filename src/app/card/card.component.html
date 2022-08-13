@@ -1,0 +1,14 @@
+<div *ngIf="product.title" class="card">
+  <img
+    *ngIf="product.imageUrl"
+    class="card-img-top"
+    [src]="product.imageUrl"
+    alt="{{ product.title }}"
+    ngbButtonLabel
+  />
+  <div class="card-body">
+    <h4 class="card-title">{{ product.title }}</h4>
+    <p class="card-text">{{ product.category }}</p>
+  </div>
+  <div *ngIf="showActions" class="card-footer"></div>
+</div>
