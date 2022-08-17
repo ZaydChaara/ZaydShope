@@ -1,0 +1,11 @@
+.dropdown-toggle {
+  cursor: pointer;
+  position: "absolute";
+}
+
+.card {
+  overflow: visible;
+}
+.dropdown {
+  position: "absolute";
+}

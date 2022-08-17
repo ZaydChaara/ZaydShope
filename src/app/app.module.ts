@@ -1,40 +1,46 @@
-import { cardItems } from './cardItems';
-import { CategoriesService } from './categories.service';
-import { AdminAuthGuardService as AdminAuthGuard, AdminAuthGuardService } from './admin-auth-guard.service';
-import { UserService } from './user.service';
+import { cardItems } from './shared/components/services/cardItems';
+import { CategoriesService } from './shared/components/services/categories.service';
+import {
+  AdminAuthGuardService as AdminAuthGuard,
+  AdminAuthGuardService,
+} from './Admin/Services/admin-auth-guard.service';
+import { UserService } from './shared/components/services/user.service';
 import { NgModule } from '@angular/core';
 import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { AuthService } from './auth.service';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { NavbarComponent } from './core/core/components/navbar/navbar.component';
+import { LoginComponent } from './Admin/components/login/login.component';
+import { HomeComponent } from './core/core/components/home/home.component';
+import { AuthService } from './Admin/Services/auth.service';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { DashboardComponent } from './core/core/components/dashboard/dashboard.component';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { FormsModule } from '@angular/forms';
-import { AuthGuardService as AuthGuard, AuthGuardService } from './auth-guard.service';
-import { AdminProductsComponent } from './admin-products/admin-products.component';
-import { AdminFormComponent } from './admin-form/admin-form.component';
-import { ProductService } from './product.service';
-import { FilterComponent } from './filter/filter.component';
+import {
+  AuthGuardService as AuthGuard,
+  AuthGuardService,
+} from './Admin/Services/auth-guard.service';
+import { AdminProductsComponent } from './Admin/components/admin-products/admin-products.component';
+import { AdminFormComponent } from './Admin/components/admin-form/admin-form.component';
+import { ProductService } from './shared/components/services/product.service';
+import { FilterComponent } from './shared/components/filter/filter.component';
 import { CardComponent } from './card/card.component';
-import { PublishComponent } from './publish/publish.component';
-import { PublishFormComponent } from './publish-form/publish-form.component';
+import { PublishComponent } from './shared/components/publish/publish.component';
+import { PublishFormComponent } from './shared/components/publish-form/publish-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import { MatButtonModule } from "@angular/material/button";
-import { MatToolbarModule } from "@angular/material/toolbar";
-import {MatSelectModule} from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { PublishedPagesComponent } from './published-pages/published-pages.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { PublishedPagesComponent } from './shared/components/published-pages/published-pages.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +56,7 @@ import { PublishedPagesComponent } from './published-pages/published-pages.compo
     PublishComponent,
     PublishFormComponent,
     PublishedPagesComponent,
-    ],
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -66,19 +72,16 @@ import { PublishedPagesComponent } from './published-pages/published-pages.compo
     MatSelectModule,
     MatFormFieldModule,
     MatInputModule,
-
-    
-    
   ],
   providers: [
-    {provide: FIREBASE_OPTIONS, useValue: environment.firebase},
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
     AuthService,
     AuthGuardService,
     UserService,
     AdminAuthGuardService,
     CategoriesService,
-    ProductService,  
+    ProductService,
   ],
-  bootstrap: [AppComponent,]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
