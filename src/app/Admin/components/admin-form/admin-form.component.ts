@@ -12,7 +12,7 @@ import { ICategories } from 'app/shared/components/services/categories.model';
 })
 export class AdminFormComponent implements OnInit {
   categories$: Observable<ICategories[]> | undefined;
-  product: any = {};
+  country: any = {};
   id;
 
   constructor(
@@ -28,21 +28,21 @@ export class AdminFormComponent implements OnInit {
       this.productService
         .get(this.id)
         .pipe(take(1))
-        .subscribe((p: any) => (this.product = p));
+        .subscribe((p: any) => (this.country = p));
   }
 
   save(product: any) {
     if (this.id) this.productService.update(this.id, product);
     else this.productService.create(product);
 
-    this.router.navigate(['/admin/products']);
+    this.router.navigate(['/admin/countries']);
   }
 
   delete() {
     if (!confirm('Are you sure you want to delete this product?')) return;
 
     this.productService.delete(this.id);
-    this.router.navigate(['/admin/products']);
+    this.router.navigate(['/admin/countries']);
   }
 
   ngOnInit() {}

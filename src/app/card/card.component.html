@@ -1,14 +1,14 @@
-<div *ngIf="product.title" class="card">
+<div *ngIf="country.title" class="card">
   <img
-    *ngIf="product.imageUrl"
+    *ngIf="country.imageUrl"
     class="card-img-top"
-    [src]="product.imageUrl"
-    alt="{{ product.title }}"
+    [src]="country.imageUrl"
+    alt="{{ country.title }}"
     ngbButtonLabel
   />
   <div class="card-body">
-    <h4 class="card-title">{{ product.title }}</h4>
-    <p class="card-text">{{ product.category }}</p>
+    <h4 class="card-title">{{ country.title }}</h4>
+    <p class="card-text">{{ country.category }}</p>
   </div>
   <div *ngIf="showActions" class="card-footer"></div>
 </div>

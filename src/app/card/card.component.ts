@@ -9,7 +9,7 @@ import { cardItems } from '../shared/components/services/cardItems';
 export class CardComponent implements OnInit {
   countries: Partial<cardItems>[] = [];
 
-  @Input('product') product!: cardItems;
+  @Input('country') country!: cardItems;
   @Input('show-actions') showActions = true;
 
   constructor() {}

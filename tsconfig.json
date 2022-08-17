@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./src",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": false,
@@ -8,6 +9,7 @@
     "noPropertyAccessFromIndexSignature": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -17,8 +19,9 @@
     "target": "es2020",
     "module": "es2020",
     "lib": ["es2020", "dom", "es2015"],
-    "baseUrl": "./src",
-    "paths": { "shared/*": ["spp/shared/*"] }
+    "paths": {
+      "shared/*": ["spp/shared/*"]
+    }
   },
 
   "angularCompilerOptions": {

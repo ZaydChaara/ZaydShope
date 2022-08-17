@@ -4,11 +4,11 @@ import { cardItems } from '../../../shared/components/services/cardItems';
 import { ProductService } from '../../../shared/components/services/product.service';
 
 @Component({
-  selector: 'app-admin-products',
-  templateUrl: './admin-products.component.html',
-  styleUrls: ['./admin-products.component.css'],
+  selector: 'app-admin-Countries',
+  templateUrl: './admin-countries.component.html',
+  styleUrls: ['./admin-countries.component.css'],
 })
-export class AdminProductsComponent implements OnInit {
+export class AdminCountriesComponent implements OnInit {
   products: Partial<cardItems>[] = [];
   filteredProducts: any[] = [];
   subscription: Subscription | undefined;

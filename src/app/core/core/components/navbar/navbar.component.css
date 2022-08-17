@@ -1,11 +1,8 @@
 .dropdown-toggle {
   cursor: pointer;
-  position: "absolute";
+  position: fixed;
 }
 
-.card {
-  overflow: visible;
-}
-.dropdown {
-  position: "absolute";
+.dropdown-menu {
+  z-index: 2000 !important;
 }

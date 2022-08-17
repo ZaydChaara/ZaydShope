@@ -8,11 +8,11 @@ import { ICategories } from './categories.model';
 })
 export class CountriesService {
   constructor(private db: AngularFireDatabase) {}
-  products$;
+  countries$;
 
   getAll(): Observable<ICategories[]> | undefined {
     const data: any = this.db
-      .list('/products', (ref) => ref.orderByChild('title'))
+      .list('/countries', (ref) => ref.orderByChild('title'))
       .valueChanges();
 
     return data || undefined;

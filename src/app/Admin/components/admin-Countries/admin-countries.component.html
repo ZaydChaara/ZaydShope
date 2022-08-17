@@ -1,5 +1,5 @@
 <p>
-  <a routerLink="/admin/products/new" class="btn btn-primary">New Country</a>
+  <a routerLink="/admin/country/new" class="btn btn-primary">New Country</a>
 </p>
 <p>
   <input
@@ -22,7 +22,7 @@
     <tr *ngFor="let item of filteredProducts">
       <td>{{ item.title }}</td>
       <td>
-        <a [routerLink]="['/admin/products', item.$key]">Edit</a>
+        <a [routerLink]="['/admin/countries', item.$key]">Edit</a>
       </td>
     </tr>
   </tbody>

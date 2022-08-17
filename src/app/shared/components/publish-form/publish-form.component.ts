@@ -14,7 +14,7 @@ import { ICategories } from '../services/categories.model';
 })
 export class PublishFormComponent implements OnInit {
   categories$: Observable<ICategories[]> | undefined;
-  product: any = {};
+  country: any = {};
   countries: any = {};
   id;
 
@@ -31,7 +31,7 @@ export class PublishFormComponent implements OnInit {
       this.publishService
         .get(this.id)
         .pipe(take(1))
-        .subscribe((p: any) => (this.product = p));
+        .subscribe((p: any) => (this.country = p));
   }
 
   save(countries: any) {

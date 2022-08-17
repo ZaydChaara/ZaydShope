@@ -2,30 +2,28 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductService {
+  constructor(private db: AngularFireDatabase) {}
 
- 
-  constructor(private db: AngularFireDatabase) { }
-
-  create(product: unknown) { 
-    return this.db.list('/products').push(product);
+  create(product: unknown) {
+    return this.db.list('/countries').push(product);
   }
 
   getAll() {
-    return this.db.list('/products').snapshotChanges();
-  }
-  
-  get(productId: string) { 
-    return this.db.object('/products/' + productId).valueChanges();
+    return this.db.list('/countries').snapshotChanges();
   }
 
-  update(productId: string, product: Partial<unknown>) { 
-    return this.db.object('/products/' + productId).update(product);
+  get(productId: string) {
+    return this.db.object('/countries/' + productId).valueChanges();
   }
 
-  delete(productId: string | null) { 
-    return this.db.object('/products/' + productId).remove();
+  update(productId: string, product: Partial<unknown>) {
+    return this.db.object('/countries/' + productId).update(product);
+  }
+
+  delete(productId: string | null) {
+    return this.db.object('/countries/' + productId).remove();
   }
 }

@@ -26,7 +26,7 @@ import {
   AuthGuardService as AuthGuard,
   AuthGuardService,
 } from './Admin/Services/auth-guard.service';
-import { AdminProductsComponent } from './Admin/components/admin-products/admin-products.component';
+import { AdminCountriesComponent } from './Admin/components/admin-Countries/admin-countries.component';
 import { AdminFormComponent } from './Admin/components/admin-form/admin-form.component';
 import { ProductService } from './shared/components/services/product.service';
 import { FilterComponent } from './shared/components/filter/filter.component';
@@ -49,7 +49,7 @@ import { PublishedPagesComponent } from './shared/components/published-pages/pub
     LoginComponent,
     HomeComponent,
     DashboardComponent,
-    AdminProductsComponent,
+    AdminCountriesComponent,
     AdminFormComponent,
     FilterComponent,
     CardComponent,

@@ -1,7 +1,7 @@
 import { PublishedPagesComponent } from './shared/components/published-pages/published-pages.component';
 import { PublishFormComponent } from './shared/components/publish-form/publish-form.component';
 import { AdminFormComponent } from './Admin/components/admin-form/admin-form.component';
-import { AdminProductsComponent } from './Admin/components/admin-products/admin-products.component';
+import { AdminCountriesComponent } from './Admin/components/admin-Countries/admin-countries.component';
 import { HomeComponent } from './core/core/components/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -21,17 +21,17 @@ const routes: Routes = [
     canActivate: [AuthGuardService, AdminAuthGuardService],
   },
   {
-    path: 'admin/products',
-    component: AdminProductsComponent,
+    path: 'admin/countries',
+    component: AdminCountriesComponent,
     canActivate: [AuthGuardService, AdminAuthGuardService],
   },
   {
-    path: 'admin/products/new',
+    path: 'admin/country/new',
     component: AdminFormComponent,
     canActivate: [AuthGuardService, AdminAuthGuardService],
   },
   {
-    path: 'admin/products/:id',
+    path: 'admin/country/:id',
     component: AdminFormComponent,
     canActivate: [AuthGuardService, AdminAuthGuardService],
   },
