@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { cardItems } from '../../../shared/components/services/cardItems';
-import { ProductService } from '../../../shared/components/services/product.service';
+import { cardItems } from '../../../shared/services/cardItems';
+import { ProductService } from '../../../shared/services/product.service';
 
 @Component({
   selector: 'app-admin-Countries',

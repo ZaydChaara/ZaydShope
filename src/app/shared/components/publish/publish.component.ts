@@ -1,7 +1,7 @@
-import { PublishService } from '../services/publish.service';
+import { PublishService } from '../../services/publish.service';
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { cardItems } from '../services/cardItems';
+import { cardItems } from '../../services/cardItems';
 
 @Component({
   selector: 'app-publish',

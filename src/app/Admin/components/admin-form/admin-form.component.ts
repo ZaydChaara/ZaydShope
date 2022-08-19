@@ -1,9 +1,9 @@
-import { CategoriesService } from '../../../shared/components/services/categories.service';
+import { CategoriesService } from '../../../shared/services/categories.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProductService } from '../../../shared/components/services/product.service';
+import { ProductService } from '../../../shared/services/product.service';
 import { Observable, take } from 'rxjs';
-import { ICategories } from 'app/shared/components/services/categories.model';
+import { ICategories } from 'app/shared/services/categories.model';
 
 @Component({
   selector: 'app-admin-form',

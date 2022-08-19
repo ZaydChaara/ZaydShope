@@ -1,9 +1,9 @@
-import { CountriesService } from '../services/countries.service';
+import { CountriesService } from '../../services/countries.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ICategories } from '../services/categories.model';
-import { CategoriesService } from '../services/categories.service';
+import { ICategories } from '../../services/categories.model';
+import { CategoriesService } from '../../services/categories.service';
 
 @Component({
   selector: 'app-filter',

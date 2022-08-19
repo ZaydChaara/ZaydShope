@@ -1,10 +1,10 @@
-import { cardItems } from './shared/components/services/cardItems';
-import { CategoriesService } from './shared/components/services/categories.service';
+import { cardItems } from './shared/services/cardItems';
+import { CategoriesService } from './shared/services/categories.service';
 import {
   AdminAuthGuardService as AdminAuthGuard,
   AdminAuthGuardService,
 } from './Admin/Services/admin-auth-guard.service';
-import { UserService } from './shared/components/services/user.service';
+import { UserService } from './shared/services/user.service';
 import { NgModule } from '@angular/core';
 import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -28,7 +28,7 @@ import {
 } from './Admin/Services/auth-guard.service';
 import { AdminCountriesComponent } from './Admin/components/admin-Countries/admin-countries.component';
 import { AdminFormComponent } from './Admin/components/admin-form/admin-form.component';
-import { ProductService } from './shared/components/services/product.service';
+import { ProductService } from './shared/services/product.service';
 import { FilterComponent } from './shared/components/filter/filter.component';
 import { CardComponent } from './card/card.component';
 import { PublishComponent } from './shared/components/publish/publish.component';

@@ -7,8 +7,8 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import { Observable, of } from 'rxjs';
-import { AppUser } from '../../shared/components/services/app-user';
-import { UserService } from '../../shared/components/services/user.service';
+import { AppUser } from '../../shared/services/app-user';
+import { UserService } from '../../shared/services/user.service';
 
 @Injectable({
   providedIn: 'root',

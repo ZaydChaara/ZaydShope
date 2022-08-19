@@ -1,11 +1,11 @@
-import { PublishService } from '../services/publish.service';
-import { CountriesService } from '../services/countries.service';
+import { PublishService } from '../../services/publish.service';
+import { CountriesService } from '../../services/countries.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable, take } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CategoriesService } from '../services/categories.service';
-import { ProductService } from '../services/product.service';
-import { ICategories } from '../services/categories.model';
+import { CategoriesService } from '../../services/categories.service';
+import { ProductService } from '../../services/product.service';
+import { ICategories } from '../../services/categories.model';
 
 @Component({
   selector: 'app-publish-form',

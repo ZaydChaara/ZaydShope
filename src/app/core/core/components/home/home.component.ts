@@ -1,6 +1,6 @@
-import { ProductService } from '../../../../shared/components/services/product.service';
+import { ProductService } from '../../../../shared/services/product.service';
 import { Component, OnInit } from '@angular/core';
-import { cardItems } from '../../../../shared/components/services/cardItems';
+import { cardItems } from '../../../../shared/services/cardItems';
 import { Observable, Subscription } from 'rxjs';
 
 @Component({
