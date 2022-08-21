@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { cardItems } from '../../services/cardItems';
-import { PublishService } from '../../services/publish.service';
 import { PublishedService } from '../../services/published.service';
 
 @Component({
