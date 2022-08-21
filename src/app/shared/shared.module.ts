@@ -1,3 +1,7 @@
+import { SharedRoutingModule } from './shared-routing.module';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { getAuth, provideAuth } from '@angular/fire/auth';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './../app-routing.module';
 import {
@@ -17,6 +21,7 @@ import { ProductService } from './services/product.service';
 import { FilterComponent } from './components/filter/filter.component';
 import { CardComponent } from './components/card/card.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { environment } from 'environments/environment';
 
 @NgModule({
   declarations: [
@@ -26,8 +31,24 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FilterComponent,
     CardComponent,
   ],
-  imports: [CommonModule, AppRoutingModule, FormsModule, NgbModule],
-  exports: [FilterComponent, CardComponent],
+  imports: [
+    CommonModule,
+    AppRoutingModule,
+    FormsModule,
+    SharedRoutingModule,
+    NgbModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+  ],
+  exports: [
+    FilterComponent,
+    CardComponent,
+    FormsModule,
+    NgbModule,
+    CommonModule,
+    AppRoutingModule,
+  ],
   providers: [
     UserService,
     PublishedService,

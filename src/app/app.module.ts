@@ -24,8 +24,6 @@ import { AdminModule } from './Admin/admin.module';
     CoreModule,
     AdminModule,
     AppRoutingModule,
-    NgbModule,
-    FormsModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   providers: [
