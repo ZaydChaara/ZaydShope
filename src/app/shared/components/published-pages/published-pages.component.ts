@@ -15,24 +15,26 @@ export class PublishedPagesComponent implements OnInit {
   subscription: Subscription | undefined;
 
   constructor(private publishService: PublishedService) {
-    this.subscription = this.publishService.getAll().subscribe((actions) => {
-      this.countries = [];
-
-      actions.forEach((action) => {
-        const val: any = action.payload.val();
-        this.countries.push({
-          $key: action.key ? action.key : '',
-          ...(<Object>action.payload.val()),
+    this.subscription = this.publishService
+      .get('')
+      .subscribe((actions: any) => {
+        this.countries = [];
+        actions.forEach((action) => {
+          const val: any = action.payload.val();
+          if (action.payload.val().country == 'Morocco') {
+            this.countries.push({
+              $key: action.key ? action.key : '',
+              ...(<Object>action.payload.val()),
+            });
+          }
         });
+        this.filteredCountires = this.countries;
       });
-
-      this.filteredCountires = this.countries;
-    });
   }
   filter(query: string) {
     this.filteredCountires = query
       ? this.countries?.filter((p) =>
-          p && p.title
+          p && p.category
             ? p.title.toLowerCase().includes(query.toLowerCase())
             : null
         )

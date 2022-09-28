@@ -4,10 +4,10 @@
   </div>
   <div class="col sticky-top">
     <div class="row">
-      <ng-container *ngFor="let p of filteredProducts; let i = index">
+      <ng-container *ngFor="let p of filteredCountries; let i = index">
         <div class="col-5">
           <app-card
-            [routerLink]="['/admin/published', p.$key]"
+            [routerLink]="['/admin/published', p.$key, p.title]"
             [country]="p"
           ></app-card>
         </div>

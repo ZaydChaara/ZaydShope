@@ -22,7 +22,7 @@
     <tr *ngFor="let item of filteredProducts">
       <td>{{ item.title }}</td>
       <td>
-        <a [routerLink]="['/admin/countries', item.$key]">Edit</a>
+        <a [routerLink]="['/admin/country', item.$key]">Edit</a>
       </td>
     </tr>
   </tbody>

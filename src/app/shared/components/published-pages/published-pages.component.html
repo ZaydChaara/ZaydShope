@@ -1,6 +1,4 @@
-<p>
-  <a routerLink="/admin/publish/new" class="btn btn-primary">New Publish</a>
-</p>
+<p></p>
 <p>
   <input
     #query
@@ -20,8 +18,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let item of filteredCountires">
-      <td>{{ item.title }}</td>
-      <td></td>
+      <td [routerLink]="['/Article', item.$key]">{{ item.title }}</td>
     </tr>
   </tbody>
 </table>

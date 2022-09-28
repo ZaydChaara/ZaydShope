@@ -22,6 +22,16 @@ import { FilterComponent } from './components/filter/filter.component';
 import { CardComponent } from './components/card/card.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { environment } from 'environments/environment';
+import { ArticlesService } from './components/articles.service';
+import { ArticlesComponent } from './components/articles/articles.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -30,6 +40,7 @@ import { environment } from 'environments/environment';
     PublishedPagesComponent,
     FilterComponent,
     CardComponent,
+    ArticlesComponent,
   ],
   imports: [
     CommonModule,
@@ -40,6 +51,15 @@ import { environment } from 'environments/environment';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatButtonModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatSlideToggleModule,
+    MatToolbarModule,
   ],
   exports: [
     FilterComponent,
@@ -48,6 +68,16 @@ import { environment } from 'environments/environment';
     NgbModule,
     CommonModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatButtonModule,
+    MatButtonModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatSlideToggleModule,
+    MatToolbarModule,
   ],
   providers: [
     UserService,
@@ -55,6 +85,7 @@ import { environment } from 'environments/environment';
     CountriesService,
     CategoriesService,
     ProductService,
+    ArticlesService,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })

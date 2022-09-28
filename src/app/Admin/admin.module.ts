@@ -13,10 +13,19 @@ import { AdminAuthGuardService } from './Services/admin-auth-guard.service';
 import { AuthGuardService } from './Services/auth-guard.service';
 import { AuthService } from './Services/auth.service';
 import { SharedModule } from 'app/shared/shared.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRoutingModule } from 'app/app-routing.module';
+import { SharedRoutingModule } from 'app/shared/shared-routing.module';
 
 @NgModule({
   declarations: [AdminCountriesComponent, LoginComponent, AdminFormComponent],
-  imports: [SharedModule],
+  imports: [
+    SharedModule,
+    AppRoutingModule,
+    FormsModule,
+    SharedRoutingModule,
+    NgbModule,
+  ],
   exports: [
     AdminCountriesComponent,
     LoginComponent,

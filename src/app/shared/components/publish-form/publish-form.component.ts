@@ -11,7 +11,7 @@ import { ICategories } from '../../services/categories.model';
   styleUrls: ['./publish-form.component.css'],
 })
 export class PublishFormComponent implements OnInit {
-  categories$: Observable<ICategories[]> | undefined;
+  country$: Observable<ICategories[]> | undefined;
   country: any = {};
   countries: any = {};
   id;
@@ -22,7 +22,7 @@ export class PublishFormComponent implements OnInit {
     private countriesService: CountriesService,
     private publishService: PublishService
   ) {
-    this.categories$ = countriesService.getAll();
+    this.country$ = countriesService.getAll();
 
     this.id = this.route.snapshot.paramMap.get('id');
     if (this.id)

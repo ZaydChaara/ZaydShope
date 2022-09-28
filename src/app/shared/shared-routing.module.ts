@@ -6,12 +6,14 @@ import { AuthGuardService } from 'app/Admin/Services/auth-guard.service';
 import { PublishFormComponent } from './components/publish-form/publish-form.component';
 import { PublishComponent } from './components/publish/publish.component';
 import { PublishedPagesComponent } from './components/published-pages/published-pages.component';
+import { ArticlesComponent } from './components/articles/articles.component';
 
 const routes: Routes = [
   {
     path: 'admin/published/:id',
     component: PublishedPagesComponent,
     canActivate: [AuthGuardService, AdminAuthGuardService],
+    children: [{ path: ':category', component: PublishedPagesComponent }],
   },
   {
     path: 'admin/publish',
@@ -28,6 +30,7 @@ const routes: Routes = [
     component: PublishFormComponent,
     canActivate: [AuthGuardService, AdminAuthGuardService],
   },
+  { path: 'Article/:id', component: ArticlesComponent },
 ];
 
 @NgModule({
