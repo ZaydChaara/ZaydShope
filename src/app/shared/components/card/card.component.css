@@ -1,18 +1,16 @@
-.card {
+.mat-card {
   margin-bottom: 30px;
   width: 397.5px;
+  cursor: pointer;
 }
 
-.card-img-top {
+.mat-card-header {
   height: 200px;
 }
 
-.card-footer {
+.mat-card-footer {
   padding: 0;
   background: #fff;
-}
-
-.card-footer button {
   cursor: pointer;
   text-transform: uppercase;
 }

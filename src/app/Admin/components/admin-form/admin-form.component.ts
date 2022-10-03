@@ -4,6 +4,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../../shared/services/product.service';
 import { Observable, take, Subscription } from 'rxjs';
 import { ICategories } from 'app/shared/services/categories.model';
+import {
+  FormControl,
+  FormGroupDirective,
+  NgForm,
+  Validators,
+} from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
 
 @Component({
   selector: 'app-admin-form',

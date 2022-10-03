@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mat-form-field {
+  margin-top: 10px;
+}
+
+.app-card {
+  margin-right: 500px;
+}

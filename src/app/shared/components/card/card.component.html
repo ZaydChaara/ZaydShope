@@ -1,4 +1,4 @@
-<div *ngIf="country.title" class="card">
+<!-- <div *ngIf="country.title" class="card">
   <img
     *ngIf="country.imageUrl"
     class="card-img-top"
@@ -12,3 +12,30 @@
   </div>
   <div *ngIf="showActions" class="card-footer"></div>
 </div>
+ -->
+
+<mat-card mat-button style="border: 10px">
+  <mat-card-header>
+    <img
+      mat-card-image
+      style="padding-right: 30px; margin: auto"
+      *ngIf="country.imageUrl"
+      [src]="country.imageUrl"
+    />
+  </mat-card-header>
+
+  <mat-card-footer>
+    <mat-card-footer
+      *ngIf="country.title"
+      style="padding-bottom: 20px; padding-left: 50px; padding-top: 10px"
+    >
+      {{ country.title }}</mat-card-footer
+    >
+    <mat-card-subtitle
+      *ngIf="country.title"
+      style="padding-bottom: 20px; padding-left: 50px"
+    >
+      {{ country.category }}</mat-card-subtitle
+    >
+  </mat-card-footer>
+</mat-card>
