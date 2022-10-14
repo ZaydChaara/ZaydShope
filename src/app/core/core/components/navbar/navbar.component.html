@@ -1,25 +1,28 @@
 <mat-toolbar color="primary">
-  <span mat-button> SHAREC </span>
+  <span mat-button class="CR" routerLink=""> CR</span>
 
   <div class="spacer"></div>
-
-  <a mat-button routerLink="">Home</a>
-  <mat-template #anonymousUser>
-    <span *ngIf="!(auth.user | async)" class="mat-item">
+  <mat-template #anonymousUser class="mat-template">
+    <span *ngIf="appUser === null" class="mat-item">
       <a class="mat-link" href="login">login</a>
     </span>
-    <button
-      mat-button
-      [matMenuTriggerFor]="menu"
-      color="accent"
-      *ngIf="auth.user | async as user; ngIfElse: anonymousUser"
-    >
-      {{ user.displayName }}
-    </button>
-    <br />
-    <mat-menu #menu="matMenu" style="padding-top: 50px">
-      <button mat-button routerLink="/admin/countries">Countries</button>
-      <button mat-button routerLink="/admin/publish">Publish</button>
+    <div class="rows">
+      <button
+        class="avatar"
+        mat-button
+        [matMenuTriggerFor]="menu"
+        color="accent"
+        *ngIf="appUser; ngIfElse: anonymousUser"
+      >
+        {{ appUser.name | uppercase | shortName }}
+      </button>
+    </div>
+
+    <mat-menu #menu="matMenu" class="mat-menu">
+      <ng-container *ngIf="appUser.isAdmin">
+        <button mat-button routerLink="/admin/countries">Countries</button>
+        <button mat-button routerLink="/admin/publish">Publish</button>
+      </ng-container>
       <button (click)="logout()" mat-button href="home">Logout</button>
     </mat-menu>
   </mat-template>

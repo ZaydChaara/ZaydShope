@@ -1,29 +1,35 @@
-<p>
-  <a routerLink="/admin/publish/new" class="btn btn-primary">New Publish</a>
-</p>
-<p>
-  <input
-    #query
-    (keyup)="filter(query.value)"
-    type="text"
-    class="form-control"
-    placeholder="Search..."
-  />
-</p>
+<div>
+  <div class="new-publish">
+    <button mat-raised-button routerLink="/admin/publish/new" color="accent">
+      New Publish
+    </button>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of filteredCountires">
-      <td>{{ item.title }}</td>
-      <td>
-        <a [routerLink]="['/admin/publish', item.$key]">Edit</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Country</th>
+        <td mat-cell *matCellDef="let element">{{ element.title }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef>Country</th>
+        <td mat-cell *matCellDef="let element">{{ element.country }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef>Edit</th>
+        <td mat-cell *matCellDef="let element">
+          <button
+            mat-raised-button
+            color="primary"
+            style="margin-bottom: 25px; margin-top: 35px"
+            [routerLink]="['/admin/publish/' + element.key]"
+          >
+            Edit
+          </button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

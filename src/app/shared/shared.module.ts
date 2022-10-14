@@ -32,6 +32,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatIconModule } from '@angular/material/icon';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -59,6 +66,19 @@ import { MatChipsModule } from '@angular/material/chips';
     MatInputModule,
     MatSelectModule,
     MatChipsModule,
+    MatToolbarModule,
+    MatButtonToggleModule,
+    MatListModule,
+    MatMenuModule,
+    MatTableModule,
+    MatMenuModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatChipsModule,
+    MatIconModule,
+    MatPaginatorModule,
   ],
   exports: [
     FilterComponent,
@@ -68,6 +88,26 @@ import { MatChipsModule } from '@angular/material/chips';
     CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatChipsModule,
+    MatToolbarModule,
+    MatButtonToggleModule,
+    MatListModule,
+    MatMenuModule,
+    MatTableModule,
+    MatMenuModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatChipsModule,
+    MatIconModule,
+    MatPaginatorModule,
   ],
   providers: [
     UserService,

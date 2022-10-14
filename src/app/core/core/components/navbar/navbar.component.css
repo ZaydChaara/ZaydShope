@@ -1,16 +1,42 @@
-.dropdown-toggle {
-  cursor: pointer;
-  position: fixed;
-}
-
-.dropdown-menu {
-  z-index: 2000 !important;
-}
-
 .spacer {
   flex: 1 1 auto;
 }
+.mat-template {
+  flex-direction: row;
+}
 
 .mat-menu {
+  display: flex;
+  align-items: center;
   cursor: pointer;
+}
+.mat-button {
+  flex-direction: row;
+  position: relative;
+  cursor: pointer;
+  margin-left: 2px;
+  margin-bottom: -2px;
+  border-left: 30px;
+  border-right: 30px;
+}
+.CR {
+  cursor: pointer;
+}
+.rows .circles:not(:first-child) {
+  margin-left: -18px;
+}
+.rows .circles:nth-child(n + 5) {
+  display: none;
+}
+.avatar {
+  font-size: 20px;
+  width: 63px;
+  height: 60px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  background: orange;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

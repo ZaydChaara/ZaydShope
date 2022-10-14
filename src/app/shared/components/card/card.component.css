@@ -14,3 +14,13 @@
   cursor: pointer;
   text-transform: uppercase;
 }
+
+.mat-card-footer {
+  font-size: large;
+  margin-left: 50px;
+}
+
+.mat-card-subtitle {
+  font-size: small;
+  margin-left: 50px;
+}

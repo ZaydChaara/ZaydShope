@@ -1,12 +1,23 @@
-:host {
+.container-1 {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
+
 .mat-form-field {
+  flex: 1;
+  order: 1;
   margin-top: 10px;
 }
 
+.button {
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 650px;
+  flex: 1;
+  order: 3;
+}
 .app-card {
-  margin-right: 500px;
+  margin-left: 500px;
+  flex: 7;
+  order: 2;
 }

@@ -19,7 +19,7 @@ export class UserService {
     });
   }
 
-  get(uid: string): Observable<AppUser | unknown> {
+  get(uid: string): Observable<any> {
     return this.db.object('/users/' + uid).valueChanges();
   }
 }

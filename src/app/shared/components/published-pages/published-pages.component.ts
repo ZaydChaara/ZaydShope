@@ -28,6 +28,7 @@ export class PublishedPagesComponent implements OnInit {
             });
           }
         });
+        console.log('Morocco');
         this.filteredCountires = this.countries;
       });
   }

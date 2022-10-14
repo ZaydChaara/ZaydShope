@@ -9,19 +9,21 @@ import 'firebase/compat/firestore';
 import { Observable, of } from 'rxjs';
 import { AppUser } from '../../shared/services/app-user';
 import { UserService } from '../../shared/services/user.service';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  user$!: Observable<firebase.User | null>;
+  user$!: Observable<firebase.User>;
 
   constructor(
     private fireauth: AngularFireAuth,
     private router: Router,
     public auth: AngularFireAuth,
     private userService: UserService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private db: AngularFireDatabase
   ) {
     this.user$ = auth.authState;
   }
@@ -52,6 +54,10 @@ export class AuthService {
         return of(null);
       })
     );
+  }
+
+  get(uid: string): Observable<any> {
+    return this.db.object('/users/' + uid).valueChanges();
   }
 
   // register method

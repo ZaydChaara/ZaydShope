@@ -1,8 +1,27 @@
-.example-card {
-  max-width: 400px;
+.mat-card {
+  margin: auto;
+  width: 640px;
+  padding: 50px;
+  font-family: "Avenir", sans-serif;
+  color: #33475b;
+}
+.mat-card-header {
+  font-weight: bold;
+  font-style: italic;
+  font-size: large;
+  left: auto;
+  position: relative;
+  padding-bottom: 20px;
+}
+.mat-card-image {
+  width: 500px;
+  float: center;
+  padding-right: 30px;
+  margin-top: 20px;
+  margin-left: 50px;
 }
 
-.example-header-image {
-  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
-  background-size: cover;
+.mat-card-subtitle {
+  font-style: italic;
+  color: black;
 }

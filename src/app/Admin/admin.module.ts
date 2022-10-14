@@ -19,23 +19,13 @@ import { SharedRoutingModule } from 'app/shared/shared-routing.module';
 import { MatTableModule } from '@angular/material/table';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatListModule } from '@angular/material/list';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatSortModule } from '@angular/material/sort';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatIconModule } from '@angular/material/icon';
-import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [AdminCountriesComponent, LoginComponent, AdminFormComponent],
   imports: [
+    AdminRoutingModule,
     SharedModule,
     AppRoutingModule,
     FormsModule,
@@ -45,19 +35,6 @@ import { MatButtonModule } from '@angular/material/button';
     MatTableModule,
     CommonModule,
     BrowserModule,
-    MatToolbarModule,
-    MatButtonToggleModule,
-    MatListModule,
-    MatMenuModule,
-    MatTableModule,
-    MatMenuModule,
-    MatSortModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatChipsModule,
-    MatIconModule,
-    MatPaginatorModule,
   ],
   exports: [
     AdminCountriesComponent,

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AuthService } from 'app/Admin/Services/auth.service';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
@@ -13,11 +14,22 @@ import { AppUser } from '../../../../shared/services/app-user';
 export class NavbarComponent implements OnInit {
   appUser: AppUser | undefined;
 
-  constructor(public auth: AngularFireAuth) {}
+  constructor(private auth: AuthService) {}
 
-  ngOnInit(): void {}
+  async ngOnInit(): Promise<void> {
+    this.auth.appUser$.subscribe((appUser: any) => {
+      this.appUser = appUser;
+    });
+  }
 
-  logout() {
-    this.auth.signOut();
+  logout(): void {
+    this.auth.logout();
+  }
+
+  getShortName(fullName) {
+    return fullName
+      .split(' ')
+      .map((n) => n[0])
+      .join('');
   }
 }

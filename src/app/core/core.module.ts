@@ -13,9 +13,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 
 import { SharedModule } from 'app/shared/shared.module';
+import { ShortNamePipe } from './core/components/navbar/shortName.pipe';
 
 @NgModule({
-  declarations: [DashboardComponent, NavbarComponent],
+  declarations: [DashboardComponent, NavbarComponent, ShortNamePipe],
   imports: [
     SharedModule,
     CoreRoutingModule,
